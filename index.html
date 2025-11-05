@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Gon ♥ Kim Huong - Wedding Invitation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Opening Card Animation - Full Screen -->
+    <section class="opening-overlay" id="openingOverlay">
+        <div class="opening-card-wrapper">
+            <div class="card-container">
+                <!-- Closed Card -->
+                <div class="card-closed-wrapper" id="cardClosedWrapper">
+                    <img src="thiepclose.png" alt="Closed Invitation" class="card-image">
+                </div>
+                
+                <!-- Opened Card (split into left and right halves) -->
+                <div class="card-opened-wrapper" id="cardOpenedWrapper">
+                    <div class="card-half-left">
+                        <img src="thiepopen.png" alt="Opened Invitation" class="card-opened-image">
+                    </div>
+                    <div class="card-half-right">
+                        <img src="thiepopen.png" alt="Opened Invitation" class="card-opened-image">
+                    </div>
+                </div>
+                
+                <!-- Flying Images -->
+                <div class="flying-photos">
+                    <img src="3.png" alt="Wedding Photo 1" class="flying-photo flying-photo-left" id="flyingPhoto1">
+                    <img src="2.png" alt="Wedding Photo 2" class="flying-photo flying-photo-right" id="flyingPhoto2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section with Couple Names -->
+    <section class="hero-section" id="heroSection">
+        <div class="couple-names">
+            <div class="decorative-line"></div>
+            <h1 class="groom-name">Min Gon</h1>
+            <div class="heart-divider">
+                <span class="heart">♥</span>
+            </div>
+            <h1 class="bride-name">Kim Huong</h1>
+            <div class="decorative-line"></div>
+        </div>
+        <p class="wedding-date-hero">We're Getting Married!</p>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <!-- Family Information Section -->
+    <section class="family-section fade-in-section">
+        <div class="container">
+            <h2 class="section-title">Gia Đình</h2>
+            <div class="family-container">
+                <!-- Groom Family -->
+                <div class="family-box groom-family">
+                    <div class="flag-icon">
+                        <img src="co_hanquoc.png" alt="Korean Flag">
+                    </div>
+                    <h3>Gia Đình Chú Rể</h3>
+                    <div class="family-info">
+                        <p class="parent-name">Ông: Seong Hwan Byeong</p>
+                        <p class="parent-name">Bà: Yoo Jeong Hye</p>
+                        <div class="divider-small"></div>
+                        <p class="child-info">Con trai: <strong>Min Gon</strong></p>
+                        <p class="address-info">📍 Seoul - Korea</p>
+                    </div>
+                </div>
+
+                <!-- Center Flag -->
+                <div class="center-flag">
+                    <img src="co_chung.png" alt="Wedding Rings">
+                </div>
+
+                <!-- Bride Family -->
+                <div class="family-box bride-family">
+                    <div class="flag-icon">
+                        <img src="co_vietnam.png" alt="Vietnam Flag">
+                    </div>
+                    <h3>Gia Đình Cô Dâu</h3>
+                    <div class="family-info">
+                        <p class="parent-name">Ông: Đoàn Hữu Thọ</p>
+                        <p class="parent-name">Bà: Hoàng Bích Hợp</p>
+                        <div class="divider-small"></div>
+                        <p class="child-info">Con gái: <strong>Kim Hương</strong></p>
+                        <p class="address-info">📍 TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Information Section -->
+    <section class="wedding-info-section fade-in-section">
+        <div class="container">
+            <div class="wedding-info-box">
+                <h2 class="section-title">Thông Tin Đám Cưới</h2>
+                <div class="wedding-details">
+                    <div class="detail-item">
+                        <div class="icon">🏠</div>
+                        <h3>Địa Điểm</h3>
+                        <p class="location-name">Tư gia nhà chú rể</p>
+                        <p class="venue-name">Amor Resort Banquet and Conference Center</p>
+                    </div>
+                    
+                    <div class="detail-divider"></div>
+                    
+                    <div class="detail-item">
+                        <div class="icon">📅</div>
+                        <h3>Thời Gian</h3>
+                        <p class="date-main">03 tháng 12, 2025</p>
+                        <p class="date-lunar">Âm lịch: 14 tháng 10, Năm Ất Tỵ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map QR Section -->
+    <section class="qr-map-section fade-in-section">
+        <div class="container">
+            <div class="qr-box">
+                <h2 class="section-title">Bản Đồ Địa Điểm</h2>
+                <div class="qr-container">
+                    <img src="QR_Map.png" alt="Map QR Code" class="qr-image">
+                    <p class="qr-instruction">Quét mã QR để xem địa điểm trên bản đồ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section fade-in-section">
+        <div class="container">
+            <h2 class="section-title">Album Ảnh Cưới</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="1.png" alt="Wedding Photo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.png" alt="Wedding Photo 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="5.png" alt="Wedding Photo 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transfer QR Section -->
+    <section class="qr-transfer-section fade-in-section">
+        <div class="container">
+            <div class="qr-transfer-box">
+                <h2 class="section-title">Mừng Cưới</h2>
+                <p class="transfer-text">Congratulations to You</p>
+                <div class="qr-transfer-container">
+                    <img src="QR_chuyenkhoan.png" alt="Transfer QR Code" class="qr-transfer-image">
+                </div>
+                <p class="transfer-note">Quét mã QR để gửi lời chúc mừng</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Thank you for celebrating with us! ♥</p>
+        <p class="footer-names">Min Gon & Kim Hương</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
