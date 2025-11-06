@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family:  'Times New Roman', Times, serif;;
+    font-family:  'Times New Roman', Times, serif;
     background: linear-gradient(135deg, #fdf6f0 0%, #fff9f4 50%, #fef8f1 100%);
     color: #333;
     overflow-x: hidden;
@@ -431,7 +431,7 @@ body {
 
 .family-container {
     display: flex;
-    gap: 40px;
+    gap: 80px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -439,14 +439,21 @@ body {
     margin: 0 auto;
 }
 
+.family-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
 .family-box {
     background: white;
-    padding: 35px 30px;
+    padding: 25px 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     flex: 1;
     min-width: 280px;
-    max-width: 400px;
+    max-width: 380px;
     position: relative;
     transition: transform 0.3s ease;
 }
@@ -457,7 +464,7 @@ body {
 
 .flag-icon {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .flag-icon img {
@@ -469,12 +476,12 @@ body {
     font-size: clamp(1.4rem, 4vw, 1.9rem);
     color: #8b4513;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .family-info {
     text-align: center;
-    line-height: 1.9;
+    line-height: 1.7;
 }
 
 .parent-name {
@@ -482,17 +489,27 @@ body {
     color: #555;
 }
 
-.child-info {
-    font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+.family-member-name {
+    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
     color: #333;
-    margin-top: 12px;
+    text-align: center;
 }
 
 .address-info {
     font-size: clamp(0.9rem, 2.2vw, 1rem);
     color: #777;
-    margin-top: 10px;
     font-style: italic;
+    text-align: center;
+}
+
+.groom-member-name,
+.groom-address {
+    order: 2;
+}
+
+.bride-member-name,
+.bride-address {
+    order: 0;
 }
 
 .divider-small {
@@ -714,7 +731,7 @@ body {
 }
 
 .circle.cream {
-    background: linear-gradient(135deg, #FFECCD , #FFECCD );
+    background: linear-gradient(135deg, #FFECCD , #FFECCD);
 }
 
 .circle.white {
@@ -801,16 +818,20 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
-        gap: 30px;
+        gap: 40px;
         position: relative;
     }
     
-    .groom-family {
+    .family-group {
+        gap: 12px;
+    }
+    
+    .groom-group {
         justify-self: start;
         margin-left: 0;
     }
     
-    .bride-family {
+    .bride-group {
         justify-self: end;
         margin-right: 0;
     }
@@ -824,9 +845,9 @@ body {
     }
     
     .family-box {
-        margin-top: 30px;
         max-width: 85%;
         z-index: 2;
+        padding: 20px 18px;
     }
     
     .detail-divider {
@@ -1018,5 +1039,213 @@ body {
     
     .flying-photo {
         max-width: 250px;
+    }
+}
+
+/* Family Section - Fixed Mobile Responsive */
+.family-section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: #8b4513;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.family-container {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.family-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.family-box {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.family-box:hover {
+    transform: translateY(-5px);
+}
+
+.flag-icon {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.flag-icon img {
+    width: clamp(50px, 10vw, 60px);
+    height: auto;
+}
+
+.family-box h3 {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    color: #8b4513;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.family-info {
+    text-align: center;
+    line-height: 1.7;
+}
+
+.parent-name {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: #555;
+}
+
+.family-member-name {
+    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.address-info {
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Desktop layout - names stay in original positions */
+.groom-group {
+    order: 1;
+}
+
+.bride-group {
+    order: 3;
+}
+
+.center-flag {
+    order: 2;
+    flex-shrink: 0;
+}
+
+.center-flag img {
+    width: clamp(70px, 12vw, 90px);
+    height: auto;
+}
+
+/* Mobile Responsive - FIXED Family Section */
+@media (max-width: 768px) {
+    .family-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+        padding: 0 20px;
+    }
+    
+    .family-group {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .groom-group {
+        order: 1;
+        align-items: flex-start;
+    }
+    
+    .bride-group {
+        order: 3;
+        align-items: flex-end;
+    }
+    
+    .center-flag {
+        order: 2;
+        position: relative;
+        margin: 20px 0;
+        transform: none;
+        left: auto;
+        top: auto;
+    }
+    
+    .family-box {
+        max-width: 100%;
+        z-index: 2;
+        padding: 20px 18px;
+    }
+    
+    /* Groom: name BELOW box */
+    .groom-group {
+        flex-direction: column;
+    }
+    .groom-group .family-box {
+        order: 1;
+    }
+    .groom-group .family-member-name,
+    .groom-group .address-info {
+        order: 2;
+        text-align: left;
+        width: 100%;
+        padding-left: 10px;
+    }
+    
+    /* Bride: name ABOVE box */
+    .bride-group {
+        flex-direction: column;
+    }
+    .bride-group .family-member-name,
+    .bride-group .address-info {
+        order: 1;
+        text-align: right;
+        width: 100%;
+        padding-right: 10px;
+    }
+    .bride-group .family-box {
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .family-container {
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .family-group {
+        max-width: 280px;
+    }
+    
+    .family-box {
+        padding: 18px 15px;
+    }
+    
+    .center-flag img {
+        width: 60px;
+    }
+    
+    .groom-group .family-member-name,
+    .groom-group .address-info {
+        padding-left: 8px;
+    }
+    
+    .bride-group .family-member-name,
+    .bride-group .address-info {
+        padding-right: 8px;
     }
 }
