@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -273,6 +273,17 @@ body {
     animation: fadeInUp 1.5s ease-out;
 }
 
+.wedding-ceremony-title {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: #8b4513;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.2s forwards;
+}
+
 .decorative-line {
     width: 200px;
     height: 2px;
@@ -286,22 +297,44 @@ body {
     to { width: 200px; opacity: 1; }
 }
 
+.name-group {
+    margin: 20px 0;
+}
+
+.role-label {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #8b4513;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
 .groom-name, .bride-name {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(2.5rem, 7vw, 4rem);
     font-family: 'Brush Script MT', cursive;
     color: #8b4513;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    margin: 15px 0;
+    margin: 8px 0;
     opacity: 0;
     animation: fadeInScale 1s ease-out forwards;
 }
 
 .groom-name {
+    animation-delay: 0.4s;
+}
+
+.name-group:first-of-type .role-label {
     animation-delay: 0.3s;
 }
 
+.name-group:last-of-type .role-label {
+    animation-delay: 0.7s;
+}
+
 .bride-name {
-    animation-delay: 0.6s;
+    animation-delay: 0.8s;
 }
 
 @keyframes fadeInScale {
@@ -318,23 +351,23 @@ body {
 .heart-divider {
     margin: 30px 0;
     opacity: 0;
-    animation: fadeIn 1s ease-out 0.9s forwards;
+    animation: fadeIn 1s ease-out 0.6s forwards;
 }
 
 .heart {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #e74c3c;
     animation: heartbeat 2s ease-in-out infinite;
 }
 
 @keyframes heartbeat {
     0%, 100% { transform: scale(1); }
-    10%, 30% { transform: scale(1.1); }
+    10%, 30% { transform: scale(1.15); }
     20%, 40% { transform: scale(1); }
 }
 
 .wedding-date-hero {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
     color: #8b4513;
     margin-top: 30px;
     font-style: italic;
@@ -345,14 +378,14 @@ body {
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #d4af37;
     animation: bounce 2s ease-in-out infinite;
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    50% { transform: translateY(-20px); }
 }
 
 @keyframes fadeIn {
@@ -385,21 +418,20 @@ body {
 
 /* Family Section */
 .family-section {
-    padding: 60px 20px;
-    min-height: auto;
+    padding: 80px 20px;
 }
 
 .section-title {
     font-size: clamp(2rem, 5vw, 2.8rem);
     color: #8b4513;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-family: 'Brush Script MT', cursive;
 }
 
 .family-container {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -409,12 +441,12 @@ body {
 
 .family-box {
     background: white;
-    padding: 30px 25px;
+    padding: 35px 30px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     flex: 1;
-    min-width: 250px;
-    max-width: 380px;
+    min-width: 280px;
+    max-width: 400px;
     position: relative;
     transition: transform 0.3s ease;
 }
@@ -434,32 +466,32 @@ body {
 }
 
 .family-box h3 {
-    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
     color: #8b4513;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .family-info {
     text-align: center;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .parent-name {
-    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
     color: #555;
 }
 
 .child-info {
-    font-size: clamp(1rem, 2.8vw, 1.2rem);
+    font-size: clamp(1.05rem, 2.8vw, 1.25rem);
     color: #333;
     margin-top: 12px;
 }
 
 .address-info {
-    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
     color: #777;
-    margin-top: 8px;
+    margin-top: 10px;
     font-style: italic;
 }
 
@@ -467,7 +499,7 @@ body {
     width: 80px;
     height: 1px;
     background: #d4af37;
-    margin: 12px auto;
+    margin: 15px auto;
 }
 
 .center-flag {
@@ -475,34 +507,28 @@ body {
 }
 
 .center-flag img {
-    width: clamp(60px, 12vw, 80px);
+    width: clamp(70px, 12vw, 90px);
     height: auto;
-    animation: rotate360 3s linear infinite;
-}
-
-@keyframes rotate360 {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
 }
 
 /* Wedding Info Section */
 .wedding-info-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background: linear-gradient(135deg, rgba(255,238,240,0.5) 0%, rgba(255,250,245,0.5) 100%);
 }
 
 .wedding-info-box {
     background: white;
-    padding: 40px 30px;
+    padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .wedding-details {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
@@ -510,29 +536,29 @@ body {
 
 .detail-item {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
     text-align: center;
 }
 
 .detail-item .icon {
-    font-size: clamp(2rem, 6vw, 3rem);
-    margin-bottom: 12px;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    margin-bottom: 15px;
 }
 
 .detail-item h3 {
-    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
     color: #8b4513;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .location-name, .venue-name, .date-main, .date-lunar {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
     color: #555;
-    margin: 6px 0;
+    margin: 8px 0;
 }
 
 .date-main {
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
     font-weight: bold;
     color: #8b4513;
 }
@@ -542,142 +568,290 @@ body {
     background: linear-gradient(to bottom, transparent, #d4af37, transparent);
 }
 
-/* QR Sections */
-.qr-map-section, .qr-transfer-section {
-    padding: 60px 20px;
+/* Couple Day Section */
+.couple-day-section {
+    padding: 80px 20px;
 }
 
-.qr-box, .qr-transfer-box {
+.couple-day-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.couple-day-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.couple-day-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.couple-day-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 4/5;
+}
+
+/* QR Codes Section */
+.qr-codes-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(255,245,240,0.5) 0%, rgba(255,250,245,0.5) 100%);
+}
+
+.qr-codes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.qr-box {
     background: white;
     padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 500px;
-    margin: 0 auto;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.qr-container, .qr-transfer-container {
-    margin: 25px 0;
+.qr-box:hover {
+    transform: translateY(-5px);
 }
 
-.qr-image, .qr-transfer-image {
+.qr-title {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: #8b4513;
+    margin-bottom: 25px;
+    font-family: 'Georgia', serif;
+}
+
+.qr-image-wrapper {
+    margin: 20px 0;
+}
+
+.qr-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.qr-instruction, .transfer-note {
+.qr-instruction {
     font-size: clamp(0.85rem, 2.2vw, 1rem);
     color: #777;
-    margin-top: 15px;
+    margin-top: 20px;
     font-style: italic;
 }
 
-.transfer-text {
-    font-size: clamp(1rem, 3vw, 1.3rem);
-    color: #8b4513;
-    font-style: italic;
-    margin: 15px 0;
+/* Dresscode Section */
+.dresscode-section {
+    padding: 80px 20px;
 }
 
-/* Gallery Section */
-.gallery-section {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, rgba(255,245,240,0.5) 0%, rgba(255,250,245,0.5) 100%);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    aspect-ratio: 4/5;
-}
-
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, transparent 70%, rgba(0,0,0,0.3));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-}
-
-.gallery-item:hover::before {
-    opacity: 1;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
+.dresscode-content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #ffeef0 0%, #fff9f4 100%);
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.dresscode-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
     color: #8b4513;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 15px;
 }
 
-footer p {
-    margin: 8px 0;
+.dresscode-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #555;
     font-style: italic;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    margin-bottom: 40px;
 }
 
-.footer-names {
-    font-size: clamp(1rem, 2.8vw, 1.2rem);
+.color-circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(40px, 8vw, 80px);
+}
+
+.color-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.circle {
+    width: clamp(80px, 15vw, 120px);
+    height: clamp(80px, 15vw, 120px);
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #f0f0f0;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+.circle.cream {
+    background: linear-gradient(135deg, #FFFDD0, #F5F5DC);
+}
+
+.circle.white {
+    background: linear-gradient(135deg, #FFFFFF, #F8F8F8);
+    border-color: #e0e0e0;
+}
+
+.circle.black {
+    background: linear-gradient(135deg, #2C2C2C, #1A1A1A);
+}
+
+.color-name {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #555;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Thank You Section */
+.thankyou-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ffeef0 0%, #fff5f0 50%, #fffaf5 100%);
+}
+
+.thankyou-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.thankyou-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-family: 'Brush Script MT', cursive;
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+.thankyou-message {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #555;
+    margin: 25px 0;
+    font-style: italic;
+}
+
+.thankyou-hearts {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #e74c3c;
+    margin: 30px 0;
+}
+
+.thankyou-names {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
     font-weight: bold;
+    color: #8b4513;
+    margin-top: 25px;
 }
 
-/* Mobile Responsive Adjustments */
+/* Mobile Responsive - IMPORTANT */
 @media (max-width: 768px) {
     .decorative-line {
         width: 150px;
     }
     
+    .scroll-indicator {
+        font-size: 2.5rem;
+    }
+    
+    /* Dresscode - Keep circles in one row on mobile */
+    .color-circles {
+        gap: clamp(20px, 5vw, 40px);
+    }
+    
+    .circle {
+        width: clamp(70px, 12vw, 100px);
+        height: clamp(70px, 12vw, 100px);
+    }
+    
+    .color-name {
+        font-size: clamp(0.8rem, 1.8vw, 1rem);
+    }
+    
+    /* Family Section - Staggered Layout */
     .family-container {
-        flex-direction: column;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 30px;
+        position: relative;
+    }
+    
+    .groom-family {
+        justify-self: start;
+        margin-left: 0;
+    }
+    
+    .bride-family {
+        justify-self: end;
+        margin-right: 0;
     }
     
     .center-flag {
-        order: 2;
-        margin: 15px 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
     
     .family-box {
-        max-width: 100%;
+        max-width: 85%;
+        z-index: 2;
     }
     
     .detail-divider {
         display: none;
+    }
+    
+    /* Couple Day - 2 rows: 2 top, 1 bottom center */
+    .couple-day-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .couple-day-center {
+        grid-column: 1 / -1;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    
+    /* QR Codes - Same Row */
+    .qr-codes-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .qr-box {
+        padding: 30px 20px;
     }
     
     .card-container {
@@ -746,7 +920,41 @@ footer p {
     }
     
     .heart {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    .scroll-indicator {
+        font-size: 2.2rem;
+    }
+    
+    /* Dresscode - Smaller circles on small phones */
+    .color-circles {
+        gap: clamp(15px, 4vw, 25px);
+    }
+    
+    .circle {
+        width: clamp(60px, 10vw, 85px);
+        height: clamp(60px, 10vw, 85px);
+    }
+    
+    .color-name {
+        font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+    }
+    
+    .family-box {
+        max-width: 90%;
+    }
+    
+    .couple-day-center {
+        max-width: 80%;
+    }
+    
+    .qr-codes-container {
+        gap: 15px;
+    }
+    
+    .qr-box {
+        padding: 25px 15px;
     }
     
     .flying-photo {
@@ -798,11 +1006,6 @@ footer p {
             opacity: 1;
             transform: translate(calc(-50% + 100px), calc(-50% + 30px)) scale(0.95) rotate(18deg);
         }
-    }
-    
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
     }
 }
 
