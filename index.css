@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family:  'Times New Roman', Times, serif;;
     background: linear-gradient(135deg, #fdf6f0 0%, #fff9f4 50%, #fef8f1 100%);
     color: #333;
     overflow-x: hidden;
@@ -431,7 +431,7 @@ body {
 
 .family-container {
     display: flex;
-    gap: 80px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -439,21 +439,14 @@ body {
     margin: 0 auto;
 }
 
-.family-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
 .family-box {
     background: white;
-    padding: 25px 20px;
+    padding: 35px 30px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     flex: 1;
     min-width: 280px;
-    max-width: 380px;
+    max-width: 400px;
     position: relative;
     transition: transform 0.3s ease;
 }
@@ -464,7 +457,7 @@ body {
 
 .flag-icon {
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .flag-icon img {
@@ -476,12 +469,12 @@ body {
     font-size: clamp(1.4rem, 4vw, 1.9rem);
     color: #8b4513;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .family-info {
     text-align: center;
-    line-height: 1.7;
+    line-height: 1.9;
 }
 
 .parent-name {
@@ -489,27 +482,17 @@ body {
     color: #555;
 }
 
-.family-member-name {
-    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+.child-info {
+    font-size: clamp(1.05rem, 2.8vw, 1.25rem);
     color: #333;
-    text-align: center;
+    margin-top: 12px;
 }
 
 .address-info {
     font-size: clamp(0.9rem, 2.2vw, 1rem);
     color: #777;
+    margin-top: 10px;
     font-style: italic;
-    text-align: center;
-}
-
-.groom-member-name,
-.groom-address {
-    order: 2;
-}
-
-.bride-member-name,
-.bride-address {
-    order: 0;
 }
 
 .divider-small {
@@ -731,7 +714,7 @@ body {
 }
 
 .circle.cream {
-    background: linear-gradient(135deg, #FFECCD , #FFECCD);
+    background: linear-gradient(135deg, #FFECCD , #FFECCD );
 }
 
 .circle.white {
@@ -818,20 +801,16 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
-        gap: 40px;
+        gap: 30px;
         position: relative;
     }
     
-    .family-group {
-        gap: 12px;
-    }
-    
-    .groom-group {
+    .groom-family {
         justify-self: start;
         margin-left: 0;
     }
     
-    .bride-group {
+    .bride-family {
         justify-self: end;
         margin-right: 0;
     }
@@ -845,9 +824,9 @@ body {
     }
     
     .family-box {
+        margin-top: 30px;
         max-width: 85%;
         z-index: 2;
-        padding: 20px 18px;
     }
     
     .detail-divider {
@@ -1040,64 +1019,4 @@ body {
     .flying-photo {
         max-width: 250px;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Family Section - Fixed for Mobile */
-.family-section {
-    padding: 80px 20px;
-}
-
-.family-container {
-    display: flex;
-    gap: 80px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.family-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    flex: 1;
-    min-width: 280px;
-    max-width: 380px;
-}
-
-.family-box {
-    background: white;
-    padding: 25px 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    width: 100%;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.family-box:hover {
-    transform: translateY(-5px);
-}
-
-.flag-icon {
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.flag-icon img {
-    width: clamp(50px, 10vw, 60px)
 }
