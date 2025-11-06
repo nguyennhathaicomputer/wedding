@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family:  'Times New Roman', Times, serif;;
     background: linear-gradient(135deg, #fdf6f0 0%, #fff9f4 50%, #fef8f1 100%);
     color: #333;
     overflow-x: hidden;
@@ -824,6 +824,7 @@ body {
     }
     
     .family-box {
+        margin-top: 30px;
         max-width: 85%;
         z-index: 2;
     }
