@@ -648,7 +648,7 @@ body {
 }
 
 .qr-title {
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     color: #8b4513;
     margin-bottom: 25px;
     font-family: 'Georgia', serif;
