@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+    <audio id="weddingMusic" loop>
+        <source src="nhaccuoi.mp3" type="audio/mpeg">
+        
+    </audio>
     <!-- Opening Card Animation - Full Screen -->
     <section class="opening-overlay" id="openingOverlay">
         <div class="opening-card-wrapper">
@@ -220,5 +225,32 @@
     </section>
 
     <script src="index.js"></script>
+    <script>
+         // ========== BACKGROUND MUSIC SETUP ==========
+        const weddingMusic = document.getElementById('weddingMusic');
+        
+        // Set volume (adjust between 0.0 and 1.0)
+        weddingMusic.volume = 0.1; // 40% volume - soft background music
+        
+        // Try to play music automatically when page loads
+        window.addEventListener('load', function() {
+            // Try to play the music
+            const playPromise = weddingMusic.play();
+            
+            // Handle autoplay restrictions
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    console.log("Wedding music is playing automatically");
+                }).catch(error => {
+                    console.log("Autoplay blocked, waiting for user interaction");
+                    // Try to play when user interacts with the page
+                    document.addEventListener('click', function playMusicOnInteraction() {
+                        weddingMusic.play();
+                        document.removeEventListener('click', playMusicOnInteraction);
+                    }, { once: true });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
