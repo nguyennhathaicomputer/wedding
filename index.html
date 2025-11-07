@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Gon ♥ Kim Huong - Wedding Invitation</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+            .hidden-video {
+            position: fixed;
+            top: -100px;
+            left: -100px;
+            width: 10px;
+            height: 10px;
+            opacity: 0.001;
+            z-index: -9999;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
 
     <audio id="weddingMusic" loop>
         <source src="nhaccuoi.mp3" type="audio/mpeg">
-        
     </audio>
     <!-- Opening Card Animation - Full Screen -->
     <section class="opening-overlay" id="openingOverlay">
@@ -226,7 +237,7 @@
 
     <script src="index.js"></script>
     <script>
-         // ========== BACKGROUND MUSIC SETUP ==========
+        //  ========== BACKGROUND MUSIC SETUP ==========
         const weddingMusic = document.getElementById('weddingMusic');
         
         // Set volume (adjust between 0.0 and 1.0)
@@ -251,6 +262,9 @@
                 });
             }
         });
+
+
+
     </script>
 </body>
 </html>
